@@ -1,13 +1,9 @@
 EngineeringExploration::Application.routes.draw do
-  get "static_pages/home"
-
-  get "static_pages/overviews"
-
-  get "static_pages/descriptions"
-
-  get "static_pages/contact"
-
-  get "static_pages/resources"
+  root to: 'static_pages#home'
+  match '/overviews', to: 'static_pages@#overviews'
+  match '/descriptions', to: 'static_pages#descriptions'
+  match '/contact', to: 'static_pages#contact'
+  match '/resources', to: 'static_pages#resources'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
