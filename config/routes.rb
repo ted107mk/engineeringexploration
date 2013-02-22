@@ -1,10 +1,16 @@
 EngineeringExploration::Application.routes.draw do
+
   root to: 'static_pages#home'
-  match '/overviews', to: 'static_pages@#overviews'
+  match '/overviews', to: 'static_pages#overviews'
   match '/descriptions', to: 'static_pages#descriptions'
   match '/contact', to: 'static_pages#contact'
   match '/resources', to: 'static_pages#resources'
-
+  match '/overviews/civil', to: 'overviews#civil'
+  match '/overviews/mechanical', to: 'overviews#mechanical'
+  match '/overviews/industrial', to: 'overviews#industrial'
+  match '/overviews/aerospace', to: 'overviews#aerospace'
+  match '/overviews/electrical', to: 'overviews#electrical'
+  match '/overviews/software', to: 'overviews#software'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
